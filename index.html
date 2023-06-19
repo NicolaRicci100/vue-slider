@@ -16,11 +16,16 @@
                 <div id="carousel">
                     <i id="top" class="fa-solid fa-circle-arrow-up" @click="goUp" v-show="!isFirstImage"></i> <!-- freccia su -->
                     <div class="gallery">
-                        <div class="gallery">
-                            <img v-for="(poster,i) in images" :src="poster.image" :class="{active : currentIndex === i}">
-                        </div>
+                        <img v-for="(poster,i) in images" :src="poster.image" :class="{active : currentIndex === i}">
                     </div>
                     <i id="down" class="fa-solid fa-circle-arrow-down" @click="goDown" v-show="!isLastImage"></i> <!-- freccia giù -->
+                    <div class="thumbnails">
+                        <img src="img/01.webp" alt="">
+                        <img src="img/02.webp" alt="">
+                        <img src="img/03.webp" alt="">
+                        <img src="img/04.webp" alt="">
+                        <img src="img/05.webp" alt="">
+                    </div>
                 </div>
             </div>
         </div>

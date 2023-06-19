@@ -19,7 +19,7 @@
 .gallery{
     height: 100%;
 }
-img{
+.gallery img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -43,4 +43,18 @@ i{
 }
 #down{
     top: 90%;
+}
+
+.thumbnails{
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.thumbnails img{
+    height: calc(100% / 5);
+    width: 100%;
+    object-fit: cover;
 }
