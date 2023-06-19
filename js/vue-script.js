@@ -31,6 +31,14 @@ createApp({
             ]
             
         }
+    },
+    methods:{
+        goUp(){
+            return this.currentIndex--;
+        },
+        goDown(){
+            return this.currentIndex++;
+        }
     }
 }).mount('#root');
 
