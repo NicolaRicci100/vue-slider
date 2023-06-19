@@ -20,7 +20,7 @@
                     </div>
                     <i id="down" class="fa-solid fa-circle-arrow-down" @click="goDown" v-show="!isLastImage"></i> <!-- freccia giù -->
                     <div class="thumbnails">
-                        <img v-for="(poster,i) in images" :src="poster.image" :class="{active : currentIndex === i}">
+                        <img v-for="(poster,i) in images" :src="poster.image" :class="{active : currentIndex === i}" @click="setIndex(i)" @mouseenter="noAutoplay">
                     </div>
                 </div>
             </div>

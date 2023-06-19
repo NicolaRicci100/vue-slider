@@ -5,6 +5,7 @@ console.log('JS OK');
 createApp({
     data(){
         return{
+            autoplay: null,
             currentIndex: 0, //indice per le immagini del carosello
             images: [ //array di oggetti per il carosello
                 {
@@ -37,6 +38,9 @@ createApp({
             return this.currentIndex === 0;
         },
         isLastImage(){ //gestione sparizione freccia giù
+            if(this.isLastImage){ //se sono all'ultima allora resetto
+                this.currentIndex = 0;
+            }
             return this.currentIndex === this.images.length - 1;
         }
     },
@@ -47,7 +51,18 @@ createApp({
         },
         goDown(){ //gestione freccia per scorrere in basso
             return this.currentIndex++;
+        },
+        setIndex(targetIndex){ //visualizzo l'immagine che premo
+            this.currentIndex = targetIndex;
+        },
+        noAutoplay(){ //fermo l'autoplay
+            clearInterval(this.autoplay);
         }
+    },
+
+    mounted(){ //gira il carosello ogni 3 secondi
+        this.autoplay = setInterval(this.goDown, 3000);
     }
+    
 }).mount('#root');
 
