@@ -17,7 +17,9 @@
                 <div id="carousel">
                     <i id="top" class="fa-solid fa-circle-arrow-up"></i> <!-- freccia su -->
                     <div class="gallery">
-                        <!-- IMMAGINI -->
+                        <div class="gallery">
+                            <img v-for="(poster,i) in images" :src="poster.image" :class="{active : currentIndex === i}">
+                        </div>
                     </div>
                     <i id="down" class="fa-solid fa-circle-arrow-down"></i> <!-- freccia giù -->
                 </div>
