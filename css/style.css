@@ -18,6 +18,7 @@
 }
 .gallery{
     height: 100%;
+    width: 85%;
 }
 .gallery img{
     height: 100%;
@@ -32,7 +33,7 @@ img.active{
 /* * GESTIONE FRECCE * */
 i{
     font-size: 30px;
-    right: 50%;
+    left: 42.5%;
     position: absolute;
     color: white;
     opacity: 0.5;
@@ -45,6 +46,7 @@ i{
     top: 90%;
 }
 
+/* * GESTIONE THUMBNAILS * */
 .thumbnails{
     height: 100%;
     width: 15%;
