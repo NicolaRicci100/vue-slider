@@ -59,4 +59,5 @@ i{
     height: calc(100% / 5);
     width: 100%;
     object-fit: cover;
+    display: block;
 }
