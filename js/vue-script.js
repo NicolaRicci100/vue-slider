@@ -5,8 +5,8 @@ console.log('JS OK');
 createApp({
     data(){
         return{
-            currentIndex: 0,
-            images: [
+            currentIndex: 0, //indice per le immagini del carosello
+            images: [ //array di oggetti per il carosello
                 {
                     image: 'img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
@@ -33,10 +33,10 @@ createApp({
         }
     },
     methods:{
-        goUp(){
+        goUp(){ //gestione pulsante per scorrere in alto
             return this.currentIndex--;
         },
-        goDown(){
+        goDown(){ //gestione pulsante per scorrere in basso
             return this.currentIndex++;
         }
     }

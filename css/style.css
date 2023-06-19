@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* * GESTIONE IMMAGINI CAROSELLO * */
+#carousel{
+    height: 400px;
+    width: 1000px;
+    margin: 100px auto;
+    position: relative;
+}
+.gallery{
+    height: 100%;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+img.active{
+    display: block;
+}
+
+/* * GESTIONE FRECCE * */
+i{
+    font-size: 30px;
+    right: 50%;
+    position: absolute;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#top{
+    bottom: 90%;
+}
+#down{
+    top: 90%;
+}
