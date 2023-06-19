@@ -14,13 +14,13 @@
         <div id="root">
             <div class="container">
                 <div id="carousel">
-                    <i id="top" class="fa-solid fa-circle-arrow-up" @click="goUp"></i> <!-- freccia su -->
+                    <i id="top" class="fa-solid fa-circle-arrow-up" @click="goUp" v-show="!isFirstImage"></i> <!-- freccia su -->
                     <div class="gallery">
                         <div class="gallery">
                             <img v-for="(poster,i) in images" :src="poster.image" :class="{active : currentIndex === i}">
                         </div>
                     </div>
-                    <i id="down" class="fa-solid fa-circle-arrow-down" @click="goDown"></i> <!-- freccia giù -->
+                    <i id="down" class="fa-solid fa-circle-arrow-down" @click="goDown" v-show="!isLastImage"></i> <!-- freccia giù -->
                 </div>
             </div>
         </div>

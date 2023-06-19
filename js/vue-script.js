@@ -32,11 +32,20 @@ createApp({
             
         }
     },
+    computed:{
+        isFirstImage(){ //gestione sparizione ferccia su
+            return this.currentIndex === 0;
+        },
+        isLastImage(){ //gestione sparizione freccia giù
+            return this.currentIndex === this.images.length - 1;
+        }
+    },
+
     methods:{
-        goUp(){ //gestione pulsante per scorrere in alto
+        goUp(){ //gestione freccia per scorrere in alto
             return this.currentIndex--;
         },
-        goDown(){ //gestione pulsante per scorrere in basso
+        goDown(){ //gestione freccia per scorrere in basso
             return this.currentIndex++;
         }
     }
